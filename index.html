@@ -21,7 +21,7 @@
     <script src="./js/dropdown.js" defer></script>
   </head>
   <body>
-    <div class="hero">
+    <!-- <div class="hero">
       <header class="header container ps-0 pe-0">
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
@@ -110,7 +110,7 @@
           <h5 class="hero__subtitle ms-3 ms-lg-4">Discover for 30 seconds</h5>
         </div>
       </div>
-    </div>
+    </div> -->
     <main>
       <div class="services">
         <h2 class="section-title">popular services</h2>
@@ -145,32 +145,46 @@
           data-bs-ride="false"
         >
           <div class="carousel-inner">
-            <div class="carousel-item active d-flex justify-content-between">
-              <img
-                src="./images/service-cover-rent-ferrari.jpg"
-                class="d-block"
-                alt="..."
-              />
-              <img
-                src="./images/service-cover-brunch-with-pool.jpg"
-                class="d-block"
-                alt="..."
-              />
-              <img
-                src="./images/service-cover-live-the-billionaire-life.jpg"
-                class="d-block"
-                alt="..."
-              />
-              <img
-                src="./images/service-cover-friday-brunch.jpg"
-                class="d-block"
-                alt="..."
-              />
-              <img
-                src="./images/service-cover-flyboard.jpg"
-                class="d-block"
-                alt="..."
-              />
+            <div class="carousel-item active">
+              <div
+                class="d-flex justify-content-center justify-content-lg-between"
+              >
+                <div class="card-wrapper">
+                  <img
+                    src="./images/service-cover-rent-ferrari.jpg"
+                    class="d-block"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-wrapper">
+                  <img
+                    src="./images/service-cover-brunch-with-pool.jpg"
+                    class="d-none d-lg-block"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-wrapper">
+                  <img
+                    src="./images/service-cover-live-the-billionaire-life.jpg"
+                    class="d-none d-lg-block"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-wrapper">
+                  <img
+                    src="./images/service-cover-friday-brunch.jpg"
+                    class="d-none d-lg-block"
+                    alt="..."
+                  />
+                </div>
+                <div class="card-wrapper">
+                  <img
+                    src="./images/service-cover-flyboard.jpg"
+                    class="d-none d-lg-block"
+                    alt="..."
+                  />
+                </div>
+              </div>
               <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>
@@ -178,32 +192,24 @@
                 </p>
               </div>
             </div>
-            <!-- <div class="carousel-item active col">
-              <img
-                src="./images/service-cover-brunch-with-pool.jpg"
-                class="d-block w-25"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>
-                  Some representative placeholder content for the second slide.
-                </p>
+            <div class="carousel-item">
+              <div class="card-wrapper m-auto">
+                <img
+                  src="./images/service-cover-brunch-with-pool.jpg"
+                  class="d-block"
+                  alt="..."
+                />
               </div>
             </div>
-            <div class="carousel-item active col">
-              <img
-                src="./images/service-cover-live-the-billionaire-life.jpg"
-                class="d-block w-25"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>
-                  Some representative placeholder content for the third slide.
-                </p>
+            <div class="carousel-item">
+              <div class="card-wrapper m-auto">
+                <img
+                  src="./images/service-cover-live-the-billionaire-life.jpg"
+                  class="d-block"
+                  alt="..."
+                />
               </div>
-            </div> -->
+            </div>
           </div>
           <button
             class="carousel-control-prev"

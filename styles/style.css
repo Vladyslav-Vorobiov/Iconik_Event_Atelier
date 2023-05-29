@@ -496,6 +496,16 @@ h6 {
   font-weight: 700;
   transition: all 0.5s;
 }
+.services .carousel-inner {
+  overflow: visible;
+}
+.services .carousel-inner .card-wrapper {
+  max-width: 360px;
+  max-height: 450px;
+}
+.services .carousel-inner .card-wrapper img {
+  width: 100%;
+}
 
 @media (min-width: 992px) {
   .hero__title {

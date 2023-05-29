@@ -68,6 +68,16 @@
       transition: all 0.5s;
     }
   }
+  .carousel-inner {
+    overflow: visible;
+    .card-wrapper {
+      max-width: 360px;
+      max-height: 450px;
+      & img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @include desktop {
