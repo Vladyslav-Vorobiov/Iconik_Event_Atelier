@@ -507,6 +507,20 @@ h6 {
   width: 100%;
 }
 
+.carus {
+  white-space: nowrap;
+  overflow: scroll;
+}
+.carus .carus-box img {
+  width: 100%;
+  object-fit: cover;
+}
+.carus .carus-card {
+  width: 265px;
+  height: 331px;
+  margin-left: 15px;
+}
+
 @media (min-width: 992px) {
   .hero__title {
     margin: 100px 0 40px;
