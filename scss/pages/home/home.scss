@@ -69,7 +69,6 @@
     }
   }
   .carousel-inner {
-    overflow: visible;
     .card-wrapper {
       max-width: 360px;
       max-height: 450px;
@@ -80,20 +79,68 @@
   }
 }
 
-.carus {
-  white-space: nowrap;
-  overflow: scroll;
-  .carus-box {
-    img {
-      width: 100%;
-      object-fit: cover;
-    }
+.carousel-custom {
+  margin-bottom: 200px;
+  overflow-x: scroll;
+  font-size: 0;
+  &__box {
+    display: flex;
   }
 
-  .carus-card {
-    width: 265px;
-    height: 331px;
-    margin-left: 15px;
+  &__card {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    max-width: 265px;
+    margin-left: 10px;
+    white-space: wrap;
+  }
+
+  .card-custom {
+    &__body {
+      flex-grow: 1;
+    }
+    &__title {
+      display: block;
+      margin: 18px 0 8px 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-decoration: none;
+      color: $white;
+    }
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__text1 {
+      text-transform: uppercase;
+      margin-right: 14px;
+    }
+    &__text2 {
+      @extend %main-text;
+      color: $light-grey;
+      text-transform: uppercase;
+      text-decoration: line-through;
+      flex: 1 1 auto;
+    }
+    &__text3 {
+      @extend %main-text;
+      color: $light-grey;
+      position: relative;
+      &::before {
+        content: "";
+        background-image: url(../images/clock.svg);
+        background-size: 10px 10px;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 125%;
+      }
+    }
   }
 }
 
@@ -123,6 +170,9 @@
           color: $white;
         }
       }
+    }
+    .carousel {
+      padding: 0 20px;
     }
   }
 }
