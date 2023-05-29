@@ -1,0 +1,101 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    margin: 50px 0 30px;
+  }
+
+  &__video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__btn-play {
+    transition: all 0.7s;
+    position: relative;
+    z-index: 2;
+    height: 52px;
+    width: 52px;
+    border-radius: 54%;
+    border: none;
+    background-image: url("../images/play-button.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &:hover {
+      transform: rotate(360deg) scale(1.1);
+    }
+    &:active {
+      transition: all 0.1s;
+      box-shadow: inset 0 0 6px 4px $purple;
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hr-divider {
+    position: relative;
+    z-index: 2;
+    opacity: 0.1;
+    &-static {
+      position: absolute;
+      z-index: 2;
+      opacity: 0.1;
+      top: 52px;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.services {
+  min-height: 500px;
+  @import "../../components/dropdown";
+  .btn-group {
+    &__btn {
+      @extend %main-text2;
+      font-weight: 700;
+      transition: all 0.5s;
+    }
+  }
+}
+
+@include desktop {
+  .hero {
+    &__title {
+      margin: 100px 0 40px;
+    }
+
+    &__btn-play {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  .services {
+    .btn-group {
+      margin-bottom: 60px;
+      &__btn {
+        padding: 18px 0;
+        max-width: 157px;
+        border: 1px solid $light-grey;
+        border-radius: 0;
+        color: $light-grey;
+        text-transform: uppercase;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}

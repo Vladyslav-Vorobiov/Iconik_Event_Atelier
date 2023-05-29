@@ -1,0 +1,63 @@
+.header {
+  position: relative;
+  z-index: 2;
+  &__logo {
+    width: 152px;
+    height: 23px;
+  }
+  &__btn-burger {
+    position: relative;
+    padding: 10px;
+    border: none;
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 22px;
+      content: "";
+      width: 72px;
+      height: 1px;
+      background: $white;
+      opacity: 0.1;
+      transform: rotate(90deg);
+    }
+    &:focus {
+      box-shadow: 0 0 2px $white;
+    }
+    &_icon {
+      display: flex;
+      position: relative;
+      height: 1px;
+      width: 24px;
+      background-color: #fff;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 24px;
+        background-color: #fff;
+      }
+      &::before {
+        top: 4px;
+        left: 0;
+      }
+      &::after {
+        bottom: 4px;
+        right: 0;
+      }
+    }
+  }
+  .nav {
+    &-item {
+      @extend %main-text2;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    &-link {
+      color: $white;
+    }
+    &-dropdown > * {
+      @extend %main-text;
+    }
+  }
+}

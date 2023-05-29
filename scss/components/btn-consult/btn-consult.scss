@@ -1,0 +1,9 @@
+.btn-consult {
+  @extend %text;
+  height: 36px;
+  font-weight: 700;
+  color: $white;
+  border: none;
+  border-radius: 2px;
+  background-color: $purple;
+}
