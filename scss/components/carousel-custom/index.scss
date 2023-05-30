@@ -1,0 +1,14 @@
+.carousel-custom {
+  overflow-x: scroll;
+  font-size: 0;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &__box {
+    padding-left: 15px;
+    display: flex;
+    gap: 10px;
+  }
+
+  @import "../card-custom";
+}

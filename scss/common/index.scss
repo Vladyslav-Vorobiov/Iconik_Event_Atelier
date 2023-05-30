@@ -4,15 +4,19 @@
 @import "./extends.scss";
 @import "./mixins.scss";
 
-html {
+body {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
   letter-spacing: 0;
-}
-
-body {
   color: $white;
   background-color: $main-bg;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: $white;
 }
 
 h1,

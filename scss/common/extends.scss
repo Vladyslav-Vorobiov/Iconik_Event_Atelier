@@ -1,43 +1,4 @@
 @import "./mixins.scss";
 
-%subtitle {
-  font-size: 15px;
-  line-height: 20px;
-}
-
-%main-text {
-  font-size: 13px;
-  line-height: 18px;
-}
-
-%main-text2 {
-  font-size: 12px;
-  line-height: 16px;
-}
-
-%text {
-  font-size: 11px;
-  line-height: 15px;
-}
-
 @include desktop {
-  %subtitle {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  %main-text {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  %main-text2 {
-    font-size: 15px;
-    line-height: 22px;
-  }
-
-  %text {
-    font-size: 13px;
-    line-height: 20px;
-  }
 }

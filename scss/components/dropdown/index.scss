@@ -10,7 +10,7 @@
     left: 15px;
     right: 15px;
     top: 100%;
-    background-color: transparent;
+    background-color: $main-bg;
     border-radius: 0;
     opacity: 0;
     pointer-events: none;
@@ -21,7 +21,7 @@
   }
   &__item,
   &__btn {
-    @extend %main-text2;
+    @include main-text2;
     width: 100%;
     padding: 15px 20px;
     text-align: left;

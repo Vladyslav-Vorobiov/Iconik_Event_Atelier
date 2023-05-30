@@ -49,7 +49,7 @@
   }
   .nav {
     &-item {
-      @extend %main-text2;
+      @include main-text2;
       text-transform: uppercase;
       font-weight: 700;
     }
@@ -57,7 +57,7 @@
       color: $white;
     }
     &-dropdown > * {
-      @extend %main-text;
+      @include main-text;
     }
   }
 }
