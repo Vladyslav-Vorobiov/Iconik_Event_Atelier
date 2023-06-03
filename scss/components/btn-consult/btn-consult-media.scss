@@ -1,6 +1,6 @@
 @include desktop {
   .btn-consult {
-    height: 54px;
+    @include text;
     background-image: linear-gradient(#7333c6, #7333c6);
     background-repeat: no-repeat;
     background-size: 0% 100%;

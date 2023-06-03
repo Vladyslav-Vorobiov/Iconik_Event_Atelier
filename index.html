@@ -21,10 +21,10 @@
     <script src="./js/dropdown.js" defer></script>
   </head>
   <body>
-    <!-- <div class="hero">
-      <header class="header container ps-0 pe-0">
+    <div class="hero">
+      <header class="header container">
         <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
+          <div class="container-fluid p-0">
             <a class="navbar-brand" href="#">
               <img
                 src="./images/logo.svg"
@@ -110,7 +110,7 @@
           <h5 class="hero__subtitle ms-3 ms-lg-4">Discover for 30 seconds</h5>
         </div>
       </div>
-    </div> -->
+    </div>
     <main>
       <div class="services">
         <h2 class="section-title">popular services</h2>
@@ -343,6 +343,102 @@
                 </article>
               </div>
             </div>
+            <div class="carousel-item">
+              <div class="d-flex gap-3 justify-content-lg-center">
+                <article class="card-custom">
+                  <a href="#" class="card-custom__picture">
+                    <img
+                      src="./images/service-cover-rent-ferrari.jpg"
+                      alt="silver car ferrari f8"
+                    />
+                  </a>
+                  <div class="card-custom__body">
+                    <a class="card-custom__title" href="#">
+                      Rent a ferrari F8 with exclusive pricing from uptown
+                      luxury cars
+                    </a>
+                  </div>
+                  <div class="card-custom__footer">
+                    <h6 class="card-custom__text1">usd 2,000.00</h6>
+                    <span class="card-custom__text2">usd 4,000.00</span>
+                    <span class="card-custom__text3"> 1h</span>
+                  </div>
+                </article>
+                <article class="card-custom">
+                  <a href="#" class="card-custom__picture">
+                    <img
+                      src="./images/service-cover-brunch-with-pool.jpg"
+                      alt="woman in front of Dubai skyscrapers"
+                    />
+                  </a>
+                  <div class="card-custom__body">
+                    <a class="card-custom__title" href="#">
+                      brunch with pool access at rooftop, the burj club
+                    </a>
+                  </div>
+                  <div class="card-custom__footer">
+                    <h6 class="card-custom__text1">usd 2,000.00</h6>
+                    <span class="card-custom__text2">usd 4,000.00</span>
+                    <span class="card-custom__text3"> 1h</span>
+                  </div>
+                </article>
+                <article class="card-custom">
+                  <a href="#" class="card-custom__picture">
+                    <img
+                      src="./images/service-cover-live-the-billionaire-life.jpg"
+                      alt="rolls-royce car"
+                    />
+                  </a>
+                  <div class="card-custom__body">
+                    <a class="card-custom__title" href="#">
+                      live the billionaire life for a day in dubai
+                    </a>
+                  </div>
+                  <div class="card-custom__footer">
+                    <h6 class="card-custom__text1">usd 2,000.00</h6>
+                    <span class="card-custom__text2">usd 4,000.00</span>
+                    <span class="card-custom__text3"> 1h</span>
+                  </div>
+                </article>
+                <article class="card-custom">
+                  <a href="#" class="card-custom__picture">
+                    <img
+                      src="./images/service-cover-friday-brunch.jpg"
+                      alt="tea, cocktails and sweets near the pool"
+                    />
+                  </a>
+                  <div class="card-custom__body">
+                    <a class="card-custom__title" href="#">
+                      friday brunch at frangipani on zaya nurai island, abu
+                      dhabi
+                    </a>
+                  </div>
+                  <div class="card-custom__footer">
+                    <h6 class="card-custom__text1">usd 2,000.00</h6>
+                    <span class="card-custom__text2">usd 4,000.00</span>
+                    <span class="card-custom__text3"> 1h</span>
+                  </div>
+                </article>
+                <article class="card-custom">
+                  <a href="#" class="card-custom__picture">
+                    <img
+                      src="./images/service-cover-flyboard.jpg"
+                      alt="man in the air on flyboard"
+                    />
+                  </a>
+                  <div class="card-custom__body">
+                    <a class="card-custom__title" href="#">
+                      Flyboard in Dubai marina
+                    </a>
+                  </div>
+                  <div class="card-custom__footer">
+                    <h6 class="card-custom__text1">usd 2,000.00</h6>
+                    <span class="card-custom__text2">usd 4,000.00</span>
+                    <span class="card-custom__text3"> 1h</span>
+                  </div>
+                </article>
+              </div>
+            </div>
           </div>
           <button
             class="carousel-control-prev carousel__btn-prev"
@@ -362,12 +458,369 @@
           </button>
         </div>
       </div>
+      <section class="info">
+        <div class="container">
+          <h2 class="section-title">how to become a part of iconic?</h2>
+          <div
+            id="carouselInfo"
+            class="carousel slide d-lg-none"
+            data-bs-ride="false"
+          >
+            <div class="carousel-inner ps-2 pe-2">
+              <div class="carousel-item item active">
+                <img
+                  src="./images/request.svg"
+                  class="d-block w-100 item__img"
+                  alt="laptop"
+                />
+                <h6 class="item__subtitle">1. You leave a request online</h6>
+                <p class="item__caption">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt.
+                </p>
+              </div>
+              <div class="carousel-item item">
+                <img
+                  src="./images/consultation.svg"
+                  class="d-block w-100 item__img"
+                  alt="phones web and wifi"
+                />
+                <h6 class="item__subtitle">2. Consultation with the manager</h6>
+                <p class="item__caption">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt.
+                </p>
+              </div>
+              <div class="carousel-item item">
+                <img
+                  src="./images/conditions.svg"
+                  class="d-block w-100 item__img"
+                  alt="shaking hands"
+                />
+                <h6 class="item__subtitle">
+                  3. Presentation or discussion of conditions remotely
+                </h6>
+                <p class="item__caption">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
+              <div class="carousel-item item">
+                <img
+                  src="./images/contract.svg"
+                  class="d-block w-100 item__img"
+                  alt="contract-paper and pen"
+                />
+                <h6 class="item__subtitle">4. We conclude a contract.</h6>
+                <p class="item__caption">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt.
+                </p>
+              </div>
+              <div class="carousel-item item">
+                <img
+                  src="./images/enjoy.svg"
+                  class="d-block w-100 item__img"
+                  alt="skyscrapers and a plane"
+                />
+                <h6 class="item__subtitle">
+                  5. You enjoy all the benefits of membership
+                </h6>
+                <p class="item__caption">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt.
+                </p>
+              </div>
+            </div>
+            <div class="carousel__controls-box">
+              <button
+                class="carousel-control-prev carousel__btn-prev"
+                type="button"
+                data-bs-target="#carouselInfo"
+                data-bs-slide="prev"
+              >
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <div class="carousel-indicators carousel__indicators m-0">
+                <button
+                  type="button"
+                  data-bs-target="#carouselInfo"
+                  data-bs-slide-to="0"
+                  class="active carousel__indicator"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselInfo"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                  class="carousel__indicator"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselInfo"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                  class="carousel__indicator"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselInfo"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                  class="carousel__indicator"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselInfo"
+                  data-bs-slide-to="4"
+                  aria-label="Slide 5"
+                  class="carousel__indicator"
+                ></button>
+              </div>
+              <button
+                class="carousel-control-next carousel__btn-next"
+                type="button"
+                data-bs-target="#carouselInfo"
+                data-bs-slide="next"
+              >
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="cards-box d-none d-lg-block">
+            <ul class="card-list">
+              <li class="card-list__item item">
+                <img
+                  src="./images/request.svg"
+                  class="d-block w-100 item__img"
+                  alt="laptop"
+                />
+                <h6 class="item__subtitle">1. You leave a request online</h6>
+                <p class="item__caption">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt.
+                </p>
+              </li>
+              <li class="card-list__item item">
+                <img
+                  src="./images/consultation.svg"
+                  class="d-block w-100 item__img"
+                  alt="phones web and wifi"
+                />
+                <h6 class="item__subtitle">2. Consultation with the manager</h6>
+                <p class="item__caption">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt.
+                </p>
+              </li>
+              <li class="card-list__item item">
+                <img
+                  src="./images/conditions.svg"
+                  class="d-block w-100 item__img"
+                  alt="shaking hands"
+                />
+                <h6 class="item__subtitle">
+                  3. Presentation or discussion of conditions remotely
+                </h6>
+                <p class="item__caption">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </li>
+              <li class="card-list__item item">
+                <img
+                  src="./images/contract.svg"
+                  class="d-block w-100 item__img"
+                  alt="contract-paper and pen"
+                />
+                <h6 class="item__subtitle">
+                  4. We conclude <br />
+                  a contract
+                </h6>
+                <p class="item__caption">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt.
+                </p>
+              </li>
+              <li class="card-list__item item">
+                <img
+                  src="./images/enjoy.svg"
+                  class="d-block w-100 item__img"
+                  alt="skyscrapers and a plane"
+                />
+                <h6 class="item__subtitle">
+                  5. You enjoy all the benefits of membership
+                </h6>
+                <p class="item__caption">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="membership">
+        <div class="container-fluid">
+          <h2 class="section-title mt-0">iconic membership plans</h2>
+          <div
+            class="d-flex justify-content-center flex-column flex-lg-row align-items-center gap-3 gal-lg-4"
+          >
+            <div class="note-card">
+              <img
+                src="./images/plan-header-img.jpg"
+                alt="hands with full glasses - cheers"
+                class="note-card__img"
+              />
+              <h4 class="note-card__title">Basic</h4>
+              <div class="note-card__box">
+                <p class="note-card__caption">
+                  Access to iconiK Members Experience Portal
+                </p>
+                <p class="note-card__caption">
+                  Access to iconiK Concierge services Complimentary
+                </p>
+                <p class="note-card__caption">
+                  iKoins to spend on Dezerved platform (on a yearly basis)
+                  Complimentary iKoins to spend on iconiK
+                </p>
+                <p class="note-card__caption">Worldwide (on a yearly basis)</p>
+                <p class="note-card__caption">
+                  Complimentary VIP meet &amp; greet services
+                </p>
+                <p class="note-card__caption">
+                  Complimentary airport pick up and drop off
+                </p>
+                <p class="note-card__caption">
+                  Access to iconiK Lifestyle services
+                </p>
+              </div>
+              <button type="button" class="note-card__btn-all">
+                View all features
+              </button>
+              <button type="button" class="note-card__btn btn-consult">
+                Get a consultation
+              </button>
+            </div>
+            <div class="note-card">
+              <img
+                src="./images/plan-header-img.jpg"
+                alt="hands with full glasses - cheers"
+                class="note-card__img"
+              />
+              <h4 class="note-card__title">Standart</h4>
+
+              <div class="note-card__box">
+                <p class="note-card__caption">
+                  Access to iconiK Members Experience Portal
+                </p>
+                <p class="note-card__caption">
+                  Access to iconiK Concierge services Complimentary
+                </p>
+                <p class="note-card__caption">
+                  iKoins to spend on Dezerved platform (on a yearly basis)
+                  Complimentary iKoins to spend on iconiK
+                </p>
+                <p class="note-card__caption">Worldwide (on a yearly basis)</p>
+                <p class="note-card__caption">
+                  Complimentary VIP meet &amp; greet services
+                </p>
+                <p class="note-card__caption">
+                  Complimentary airport pick up and drop off
+                </p>
+                <p class="note-card__caption">
+                  Access to iconiK Lifestyle services
+                </p>
+              </div>
+              <button type="button" class="note-card__btn-all">
+                View all features
+              </button>
+              <button type="button" class="note-card__btn btn-consult">
+                Get a consultation
+              </button>
+            </div>
+            <div class="note-card">
+              <img
+                src="./images/plan-header-img.jpg"
+                alt="hands with full glasses - cheers"
+                class="note-card__img"
+              />
+              <h4 class="note-card__title">Individual</h4>
+              <div class="note-card__box">
+                <p class="note-card__caption">
+                  Access to iconiK Members Experience Portal
+                </p>
+                <p class="note-card__caption">
+                  Access to iconiK Concierge services Complimentary
+                </p>
+                <p class="note-card__caption">
+                  iKoins to spend on Dezerved platform (on a yearly basis)
+                  Complimentary iKoins to spend on iconiK
+                </p>
+                <p class="note-card__caption">Worldwide (on a yearly basis)</p>
+                <p class="note-card__caption">
+                  Complimentary VIP meet &amp; greet services
+                </p>
+                <p class="note-card__caption">
+                  Complimentary airport pick up and drop off
+                </p>
+                <p class="note-card__caption">
+                  Access to iconiK Lifestyle services
+                </p>
+              </div>
+              <button type="button" class="note-card__btn-all">
+                View all features
+              </button>
+              <button type="button" class="note-card__btn btn-consult">
+                Get a consultation
+              </button>
+            </div>
+            <div class="note-card">
+              <img
+                src="./images/plan-header-img.jpg"
+                alt="hands with full glasses - cheers"
+                class="note-card__img"
+              />
+              <h4 class="note-card__title">Super star</h4>
+              <div class="note-card__box">
+                <p class="note-card__caption">
+                  Access to iconiK Members Experience Portal
+                </p>
+                <p class="note-card__caption">
+                  Access to iconiK Concierge services Complimentary
+                </p>
+                <p class="note-card__caption">
+                  iKoins to spend on Dezerved platform (on a yearly basis)
+                  Complimentary iKoins to spend on iconiK
+                </p>
+                <p class="note-card__caption">Worldwide (on a yearly basis)</p>
+                <p class="note-card__caption">
+                  Complimentary VIP meet &amp; greet services
+                </p>
+                <p class="note-card__caption">
+                  Complimentary airport pick up and drop off
+                </p>
+                <p class="note-card__caption">
+                  Access to iconiK Lifestyle services
+                </p>
+              </div>
+              <button type="button" class="note-card__btn-all">
+                <span class="test">View all features</span>
+              </button>
+              <button type="button" class="note-card__btn btn-consult">
+                Get a consultation
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/playVideo.js"></script>
+    <script src="./js/toggleCardHeight.js"></script>
   </body>
 </html>

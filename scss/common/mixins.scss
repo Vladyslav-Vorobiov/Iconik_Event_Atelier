@@ -65,3 +65,31 @@
     line-height: 20px;
   }
 }
+
+@mixin arrow-btn-prop($width, $height, $bgsize) {
+  width: $width;
+  height: $height;
+  border: 1px solid $white;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: $bgsize;
+  background-position: center;
+  opacity: 1;
+
+  &:focus {
+    box-shadow: 0 0 4px 4px #000;
+  }
+  &:active {
+    transition: all 0.1s;
+    box-shadow: inset 0 0 6px 4px $purple;
+  }
+}
+
+@mixin arrow-btn-bg($rotate) {
+  background-image: url("../images/arrow-left.svg");
+  transform: rotate($rotate);
+  &:hover {
+    background-image: url("../images/arrow-left-dark.svg");
+    background-color: $white;
+  }
+}
