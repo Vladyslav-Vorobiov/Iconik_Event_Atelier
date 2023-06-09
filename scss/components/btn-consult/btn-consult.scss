@@ -1,9 +1,11 @@
 .btn-consult {
   @include main-text;
+  padding: 0;
   height: 54px;
   font-weight: 700;
   color: $white;
   border: none;
+  outline: none;
   border-radius: 2px;
   background-color: $purple;
   transition: all 0.5s;

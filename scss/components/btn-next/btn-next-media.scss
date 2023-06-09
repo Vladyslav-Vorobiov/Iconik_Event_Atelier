@@ -1,0 +1,7 @@
+@include desktop {
+  .btn-next {
+    position: absolute;
+    top: 32%;
+    @include arrow-btn-prop(100px, 100px, 36px 36px);
+  }
+}

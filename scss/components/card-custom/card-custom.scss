@@ -3,7 +3,7 @@
     padding-right: 15px;
   }
   &__picture {
-    min-width: 265px;
+    width: 265px;
     &:nth-of-type(4) {
       padding-right: 15px;
     }
@@ -22,6 +22,13 @@
     text-decoration: none;
     color: $white;
   }
+
+  &__subtitle {
+    color: $light-grey;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
   &__footer {
     display: flex;
     justify-content: space-between;

@@ -1,6 +1,9 @@
 .header {
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   &__logo {
     width: 152px;
     height: 23px;
@@ -47,6 +50,13 @@
       }
     }
   }
+
+  .navbar-collapse {
+    background-color: #544878;
+    margin-top: 9px;
+    border-radius: 4px;
+    position: relative;
+  }
   .nav {
     &-item {
       @include main-text2;
@@ -54,10 +64,68 @@
       font-weight: 700;
     }
     &-link {
+      margin-bottom: 10px;
+      display: inline-block;
+      width: 150px;
+      text-align: center;
       color: $white;
+      border-radius: 2px;
+      &:focus {
+        outline: 0;
+        box-shadow: inset 0 0 2px 2px $white;
+      }
     }
-    &-dropdown > * {
+  }
+
+  .btn-consult {
+    width: 170px;
+    height: 40px;
+  }
+
+  .select-lang {
+    width: 46px;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &__toggle {
+      gap: 6px;
+      margin: 0;
+      padding: 4px;
+      border-radius: 4px 0 0 0;
+      border: none;
+      background-color: transparent;
       @include main-text;
+      font-size: 10px;
+      font-weight: 400;
+      &:after {
+        margin: 0;
+        background-image: url(../images/caret-down-white.svg);
+        background-size: 10px 6px;
+      }
+      &:focus {
+        box-shadow: inset 0 0 1px 1px $white;
+      }
     }
+    &__dropdown {
+      width: 46px;
+      top: 28px;
+      left: 0;
+      @include main-text;
+      font-size: 10px;
+      background-color: transparent;
+    }
+    &__option {
+      padding: 4px;
+    }
+  }
+
+  .hr-divider {
+    position: absolute;
+    z-index: 2;
+    opacity: 0.1;
+    top: 52px;
+    left: 0;
+    right: 0;
   }
 }

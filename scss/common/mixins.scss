@@ -1,3 +1,11 @@
+@mixin container-custom {
+  @include desktop() {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
 @mixin phone() {
   @media (min-width: $breakpoint_sm) {
     @content;
@@ -75,6 +83,7 @@
   background-size: $bgsize;
   background-position: center;
   opacity: 1;
+  transition: all 0.5s;
 
   &:focus {
     box-shadow: 0 0 4px 4px #000;
@@ -89,6 +98,7 @@
   background-image: url("../images/arrow-left.svg");
   transform: rotate($rotate);
   &:hover {
+    opacity: 1;
     background-image: url("../images/arrow-left-dark.svg");
     background-color: $white;
   }

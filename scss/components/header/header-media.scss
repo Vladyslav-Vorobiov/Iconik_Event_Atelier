@@ -1,7 +1,23 @@
 @include desktop {
   .header {
     padding-top: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 14px;
+    &__logo {
+      width: 220px;
+      height: 33px;
+    }
+
+    .navbar-collapse {
+      background-color: transparent;
+      margin: 0;
+      justify-content: flex-end;
+    }
+
+    .navbar-nav {
+      gap: 42px;
+      flex-wrap: wrap;
+    }
+
     .nav {
       &-item:not(:nth-child(6)) {
         position: relative;
@@ -28,27 +44,51 @@
           transition: width 0.5s;
         }
       }
-      &__dropdown {
-        position: relative;
-        &:before {
-          position: absolute;
-          bottom: 18px;
-          right: 38px;
-          content: "";
-          width: 102px;
-          height: 1px;
-          background: $white;
-          opacity: 0.1;
-          transform: rotate(90deg);
-        }
+
+      &-link {
+        margin: 0;
+        display: inline-block;
+        text-align: end;
+        width: auto;
       }
+
       &__btn {
         color: $white;
       }
     }
 
-    .navbar-nav > li {
-      margin-left: 50px;
+    .btn-consult {
+      height: 54px;
+    }
+
+    .select-lang {
+      width: 54px;
+      position: relative;
+
+      &__toggle {
+        border: none;
+      }
+      &__dropdown {
+        top: 32px;
+        width: 54px;
+        background-color: $light-grey;
+        border-radius: 2px;
+        border: none;
+      }
+      &__option:hover {
+        background-color: $purple;
+      }
+      &:before {
+        position: absolute;
+        bottom: 18px;
+        right: 20px;
+        content: "";
+        width: 102px;
+        height: 1px;
+        background: $white;
+        opacity: 0.1;
+        transform: rotate(90deg);
+      }
     }
   }
 }

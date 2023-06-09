@@ -1,0 +1,13 @@
+@include desktop {
+  .btn-play {
+    &_size {
+      height: 100px;
+      width: 100px;
+    }
+    &__img {
+      margin-left: 6px;
+      width: 23px;
+      height: 23px;
+    }
+  }
+}

@@ -10,7 +10,7 @@
       type="image/x-icon"
       href="./images/favicon/favicon-32x32.png"
     />
-    <title>Document</title>
+    <title>IconiK</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,11 +18,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/style.css" />
-    <script src="./js/dropdown.js" defer></script>
   </head>
   <body>
-    <div class="hero">
-      <header class="header container">
+    <header class="header">
+      <div class="container container-custom">
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid p-0">
             <a class="navbar-brand" href="#">
@@ -43,89 +42,169 @@
             >
               <span class="header__btn-burger_icon"></span>
             </button>
-            <div
-              class="collapse navbar-collapse justify-content-end"
-              id="navbarNavDropdown"
-            >
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul
-                class="navbar-nav d-flex align-items-center mt-3 mb-2 mt-lg-0 mb-lg-0"
+                class="navbar-nav d-flex align-items-center mt-4 mb-4 mt-lg-0 mb-lg-0"
               >
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Services</a>
+                  <a class="nav-link" href="#services">Services</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="#info">About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Gallery</a>
+                  <a class="nav-link" href="#lifestyle">Gallery</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contacts</a>
+                  <a class="nav-link" href="#contact-form">Contacts</a>
                 </li>
                 <li class="nav-item">
-                  <button type="button" class="btn btn-consult">
+                  <button type="button" class="btn-consult">
                     Get a consultation
                   </button>
                 </li>
-
-                <li class="dropdown nav__dropdown d-none d-lg-block">
+                <div class="itc-select select-lang" id="selectLanguage">
                   <button
-                    class="btn dropdown-toggle text-uppercase nav__btn"
                     type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+                    class="itc-select__toggle select-lang__toggle"
+                    name="service"
+                    value=""
+                    data-select="toggle"
+                    data-index="-1"
                   >
-                    eng
+                    Eng
                   </button>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <button class="dropdown-item text-uppercase">ua</button>
-                    </li>
-                    <li>
-                      <button class="dropdown-item text-uppercase">fr</button>
-                    </li>
-                  </ul>
-                </li>
+                  <div class="itc-select__dropdown select-lang__dropdown">
+                    <ul class="itc-select__options select-lang__options">
+                      <li
+                        class="itc-select__option select-lang__option"
+                        data-select="option"
+                        data-value="german"
+                        data-index="0"
+                      >
+                        GE
+                      </li>
+                      <li
+                        class="itc-select__option select-lang__option"
+                        data-select="option"
+                        data-value="french"
+                        data-index="1"
+                      >
+                        FR
+                      </li>
+                      <li
+                        class="itc-select__option select-lang__option"
+                        data-select="option"
+                        data-value="ukrainian"
+                        data-index="2"
+                      >
+                        UA
+                      </li>
+                      <li
+                        class="itc-select__option select-lang__option"
+                        data-select="option"
+                        data-value="english"
+                        data-index="3"
+                      >
+                        ENG
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </ul>
             </div>
           </div>
         </nav>
-      </header>
-      <hr class="m-0 hr-divider" />
-      <hr class="m-0 hr-divider-static d-lg-none" />
-      <div class="container">
-        <h1 class="hero__title">
-          life is short, <br />
-          treat yourself
-        </h1>
-        <video class="hero__video" poster="./images/video-background.jpg">
-          <source src="./video/sample-5s.mp4" type="video/mp4" />
-          <source src="#" type="video/mp4" />
-        </video>
-        <div class="d-flex align-items-center">
-          <button id="btn-play" class="hero__btn-play"></button>
+      </div>
+      <hr class="m-0 hr-divider d-lg-none" />
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container container-custom">
+          <h1 class="hero__title">
+            life is short, <br />
+            treat yourself
+          </h1>
+          <video
+            data-vid
+            class="hero__video"
+            poster="./images/hero-video-poster.jpg"
+          >
+            <source src="./video/sample-5s.mp4" type="video/mp4" />
+            <source src="#" type="video/mp4" />
+          </video>
+          <button
+            id="btn-play"
+            class="btn-play btn-play_size btn-play_bgc_white"
+          >
+            <img
+              src="./images/play-icon-dark.svg"
+              alt="triangle as symbol play"
+              class="btn-play__img"
+            />
+          </button>
           <h5 class="hero__subtitle ms-3 ms-lg-4">Discover for 30 seconds</h5>
         </div>
-      </div>
-    </div>
-    <main>
-      <div class="services">
+      </section>
+      <section class="services" id="services">
         <h2 class="section-title">popular services</h2>
-        <div class="dropdown d-lg-none" data-dropdown>
-          <button class="dropdown__btn" data-dropdown-button>
+        <div class="itc-select d-lg-none" id="selectServices">
+          <button
+            type="button"
+            class="itc-select__toggle"
+            name="service"
+            value=""
+            data-select="toggle"
+            data-index="-1"
+          >
             All services
           </button>
-          <div class="dropdown__menu">
-            <div class="dropdown__items">
-              <button type="button" class="dropdown__item">Dine</button>
-              <button type="button" class="dropdown__item">Ride</button>
-              <button type="button" class="dropdown__item">Discover</button>
-              <button type="button" class="dropdown__item">Relax</button>
-              <button type="button" class="dropdown__item">Experience</button>
-            </div>
+          <div class="itc-select__dropdown">
+            <ul class="itc-select__options">
+              <li
+                class="itc-select__option"
+                data-select="option"
+                data-value="dine"
+                data-index="0"
+              >
+                Dine
+              </li>
+              <li
+                class="itc-select__option"
+                data-select="option"
+                data-value="ride"
+                data-index="1"
+              >
+                Ride
+              </li>
+              <li
+                class="itc-select__option"
+                data-select="option"
+                data-value="discover"
+                data-index="2"
+              >
+                Discover
+              </li>
+              <li
+                class="itc-select__option"
+                data-select="option"
+                data-value="relax"
+                data-index="3"
+              >
+                Relax
+              </li>
+              <li
+                class="itc-select__option"
+                data-select="option"
+                data-value="experience"
+                data-index="3"
+              >
+                Experience
+              </li>
+            </ul>
           </div>
         </div>
         <div
@@ -241,7 +320,7 @@
           </div>
         </div>
         <div
-          id="carouselExampleCaptions"
+          id="carouselServices"
           class="carousel slide d-none d-lg-block"
           data-bs-ride="true"
           data-bs-touch="true"
@@ -441,25 +520,25 @@
             </div>
           </div>
           <button
-            class="carousel-control-prev carousel__btn-prev"
+            class="carousel-control-prev btn-prev"
             type="button"
-            data-bs-target="#carouselExampleCaptions"
+            data-bs-target="#carouselServices"
             data-bs-slide="prev"
           >
             <span class="visually-hidden">Previous</span>
           </button>
           <button
-            class="carousel-control-next carousel__btn-next"
+            class="carousel-control-next btn-next"
             type="button"
-            data-bs-target="#carouselExampleCaptions"
+            data-bs-target="#carouselServices"
             data-bs-slide="next"
           >
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-      </div>
-      <section class="info">
-        <div class="container">
+      </section>
+      <section class="info" id="info">
+        <div class="container container-custom">
           <h2 class="section-title">how to become a part of iconic?</h2>
           <div
             id="carouselInfo"
@@ -533,7 +612,7 @@
             </div>
             <div class="carousel__controls-box">
               <button
-                class="carousel-control-prev carousel__btn-prev"
+                class="carousel-control-prev btn-prev"
                 type="button"
                 data-bs-target="#carouselInfo"
                 data-bs-slide="prev"
@@ -579,7 +658,7 @@
                 ></button>
               </div>
               <button
-                class="carousel-control-next carousel__btn-next"
+                class="carousel-control-next btn-next"
                 type="button"
                 data-bs-target="#carouselInfo"
                 data-bs-slide="next"
@@ -674,24 +753,24 @@
               />
               <h4 class="note-card__title">Basic</h4>
               <div class="note-card__box">
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Access to iconiK Members Experience Portal
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Access to iconiK Concierge services Complimentary
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   iKoins to spend on Dezerved platform (on a yearly basis)
                   Complimentary iKoins to spend on iconiK
                 </p>
-                <p class="note-card__caption">Worldwide (on a yearly basis)</p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">Worldwide (on a yearly basis)</p>
+                <p class="note-card__feature">
                   Complimentary VIP meet &amp; greet services
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Complimentary airport pick up and drop off
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Access to iconiK Lifestyle services
                 </p>
               </div>
@@ -711,24 +790,24 @@
               <h4 class="note-card__title">Standart</h4>
 
               <div class="note-card__box">
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Access to iconiK Members Experience Portal
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Access to iconiK Concierge services Complimentary
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   iKoins to spend on Dezerved platform (on a yearly basis)
                   Complimentary iKoins to spend on iconiK
                 </p>
-                <p class="note-card__caption">Worldwide (on a yearly basis)</p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">Worldwide (on a yearly basis)</p>
+                <p class="note-card__feature">
                   Complimentary VIP meet &amp; greet services
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Complimentary airport pick up and drop off
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Access to iconiK Lifestyle services
                 </p>
               </div>
@@ -747,24 +826,24 @@
               />
               <h4 class="note-card__title">Individual</h4>
               <div class="note-card__box">
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Access to iconiK Members Experience Portal
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Access to iconiK Concierge services Complimentary
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   iKoins to spend on Dezerved platform (on a yearly basis)
                   Complimentary iKoins to spend on iconiK
                 </p>
-                <p class="note-card__caption">Worldwide (on a yearly basis)</p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">Worldwide (on a yearly basis)</p>
+                <p class="note-card__feature">
                   Complimentary VIP meet &amp; greet services
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Complimentary airport pick up and drop off
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Access to iconiK Lifestyle services
                 </p>
               </div>
@@ -783,28 +862,28 @@
               />
               <h4 class="note-card__title">Super star</h4>
               <div class="note-card__box">
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Access to iconiK Members Experience Portal
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Access to iconiK Concierge services Complimentary
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   iKoins to spend on Dezerved platform (on a yearly basis)
                   Complimentary iKoins to spend on iconiK
                 </p>
-                <p class="note-card__caption">Worldwide (on a yearly basis)</p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">Worldwide (on a yearly basis)</p>
+                <p class="note-card__feature">
                   Complimentary VIP meet &amp; greet services
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Complimentary airport pick up and drop off
                 </p>
-                <p class="note-card__caption">
+                <p class="note-card__feature">
                   Access to iconiK Lifestyle services
                 </p>
               </div>
-              <button type="button" class="note-card__btn-all">
+              <button type="button" class="note-card__btn-all" data-btn-all>
                 <span class="test">View all features</span>
               </button>
               <button type="button" class="note-card__btn btn-consult">
@@ -814,7 +893,501 @@
           </div>
         </div>
       </section>
+      <section class="lifestyle" id="lifestyle">
+        <h2 class="section-title">iconic lifestyle</h2>
+        <div class="gallery">
+          <div class="gallery__item1">
+            <img
+              class="gallery__img"
+              src="./images/gallery-1.jpg"
+              alt="two mans skydiving"
+            />
+          </div>
+          <div class="gallery__item2">
+            <img
+              class="gallery__img"
+              src="./images/gallery-2.jpg"
+              alt="car in desert"
+            />
+          </div>
+          <div class="gallery__item3">
+            <img
+              class="gallery__img"
+              src="./images/gallery-5.jpg"
+              alt="happy girls at the party"
+            />
+          </div>
+          <div class="gallery__item4">
+            <img
+              class="gallery__img"
+              src="./images/gallery-6.jpg"
+              alt="skyscrapers and yacht"
+            />
+            <button class="btn-info d-none d-lg-block">
+              <img src="./images/info.svg" alt="info button" />
+            </button>
+          </div>
+          <div class="gallery__item5">
+            <img
+              class="gallery__img"
+              src="./images/gallery-9.jpg"
+              alt="river, yacht and skyscrapers"
+            />
+          </div>
+          <div class="gallery__item6">
+            <img
+              class="gallery__img"
+              src="./images/gallery-10.jpg"
+              alt="man on the flyboard"
+            />
+          </div>
+          <div class="gallery__item7">
+            <img
+              class="gallery__img"
+              src="./images/gallery-4.jpg"
+              alt="people at the party and lots confetti"
+            />
+          </div>
+          <div class="gallery__item8">
+            <img
+              class="gallery__img"
+              src="./images/gallery-3.jpg"
+              alt="woman in the pool"
+            />
+          </div>
+          <div class="gallery__item9">
+            <img
+              class="gallery__img"
+              src="./images/gallery-7.jpg"
+              alt="palace and palms"
+            />
+            <button class="btn-info d-none d-lg-block">
+              <img src="./images/info.svg" alt="info button" />
+            </button>
+          </div>
+          <div class="gallery__item10 d-none d-lg-block">
+            <img
+              class="gallery__img"
+              src="./images/gallery-8.jpg"
+              alt="girls in swimsuits"
+            />
+          </div>
+          <div class="gallery__item11 d-none d-lg-block">
+            <img
+              class="gallery__img"
+              src="./images/gallery-11.jpg"
+              alt="girls with sparklers"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="events">
+        <h2 class="section-title ps-3 pe-3">iconic latest events</h2>
+        <div class="videos d-flex">
+          <div class="videos__item">
+            <video class="videos__video" poster="./images/video1-poster.jpg">
+              <source src="#" type="video/mp4" />
+              <source src="#" type="video/mp4" />
+            </video>
+            <button class="btn-play btn-play_size btn-play_bgc_transp">
+              <img
+                src="./images/play-symbol.svg"
+                alt="triangle as symbol play"
+                class="btn-play__img"
+              />
+            </button>
+            <h5 class="videos__subtitle">
+              Dubai Marina Yacht Tour with Barbecue Lunch - exclusive Yachts
+            </h5>
+          </div>
+          <div class="videos__item">
+            <video class="videos__video" poster="./images/video2-poster.jpg">
+              <source src="#" type="video/mp4" />
+              <source src="#" type="video/mp4" />
+            </video>
+            <button class="btn-play btn-play_size btn-play_bgc_transp">
+              <img
+                src="./images/play-symbol.svg"
+                alt="triangle as symbol play"
+                class="btn-play__img"
+              />
+            </button>
+            <h5 class="videos__subtitle">
+              Dubai Marina Yacht Tour with Barbecue Lunch - exclusive Yachts
+            </h5>
+          </div>
+          <div class="videos__item">
+            <video class="videos__video" poster="./images/video1-poster.jpg">
+              <source src="#" type="video/mp4" />
+              <source src="#" type="video/mp4" />
+            </video>
+            <button class="btn-play btn-play_size btn-play_bgc_transp">
+              <img
+                src="./images/play-symbol.svg"
+                alt="triangle as symbol play"
+                class="btn-play__img"
+              />
+            </button>
+            <h5 class="videos__subtitle">
+              Dubai Marina Yacht Tour with Barbecue Lunch - exclusive Yachts
+            </h5>
+          </div>
+        </div>
+        <button class="btn-consult">Chose a plan</button>
+      </section>
+      <section class="managers">
+        <h2 class="section-title">
+          Iconik managers will provide you <br />
+          with the best experience
+        </h2>
+        <div class="carousel-custom d-lg-none">
+          <div class="carousel-custom__box">
+            <div class="carousel-custom__card card-custom">
+              <div class="card-custom__picture">
+                <img
+                  class="card-custom__img"
+                  src="./images/manager-1.jpg"
+                  alt="young man in black suit"
+                />
+              </div>
+
+              <h5 class="card-custom__title">Mahammed Naqvi</h5>
+              <p class="card-custom__subtitle">Iconik lifestyle manager</p>
+            </div>
+            <div class="carousel-custom__card card-custom">
+              <div class="card-custom__picture">
+                <img
+                  class="card-custom__img"
+                  src="./images/manager-2.jpg"
+                  alt="young woman with dark hair in black suit"
+                />
+              </div>
+              <h5 class="card-custom__title">Aliya Mir</h5>
+              <p class="card-custom__subtitle">Iconik lifestyle manager</p>
+            </div>
+            <div class="carousel-custom__card card-custom">
+              <div class="card-custom__picture">
+                <img
+                  class="card-custom__img"
+                  src="./images/manager-3.jpg"
+                  alt="young woman with blonde hair in black suit"
+                />
+              </div>
+              <h5 class="card-custom__title">Unais el-Baccus</h5>
+              <p class="card-custom__subtitle">Iconik lifestyle manager</p>
+            </div>
+          </div>
+        </div>
+        <div
+          id="carouselManagers"
+          class="carousel slide d-none d-lg-block container"
+          data-bs-touch="true"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-lg-center wrapper">
+                <div class="card-custom">
+                  <div class="card-custom__picture">
+                    <img
+                      class="card-custom__img"
+                      src="./images/manager-1.jpg"
+                      alt="young man in black suit"
+                    />
+                  </div>
+
+                  <h5 class="card-custom__title">Mahammed Naqvi</h5>
+                  <p class="card-custom__subtitle">Iconik lifestyle manager</p>
+                </div>
+                <div class="card-custom">
+                  <div class="card-custom__picture">
+                    <img
+                      class="card-custom__img"
+                      src="./images/manager-2.jpg"
+                      alt="young man in black suit"
+                    />
+                  </div>
+
+                  <h5 class="card-custom__title">Aliya Mir</h5>
+                  <p class="card-custom__subtitle">Iconik lifestyle manager</p>
+                </div>
+                <div class="card-custom">
+                  <div class="card-custom__picture">
+                    <img
+                      class="card-custom__img"
+                      src="./images/manager-3.jpg"
+                      alt="young man in black suit"
+                    />
+                  </div>
+
+                  <h5 class="card-custom__title">Unais el-Baccus</h5>
+                  <p class="card-custom__subtitle">Iconik lifestyle manager</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex gap-3 justify-content-lg-center wrapper">
+                <div class="card-custom">
+                  <div class="card-custom__picture">
+                    <img
+                      class="card-custom__img"
+                      src="./images/manager-1.jpg"
+                      alt="young man in black suit"
+                    />
+                  </div>
+
+                  <h5 class="card-custom__title">Mahammed Naqvi</h5>
+                  <p class="card-custom__subtitle">Iconik lifestyle manager</p>
+                </div>
+                <div class="card-custom">
+                  <div class="card-custom__picture">
+                    <img
+                      class="card-custom__img"
+                      src="./images/manager-2.jpg"
+                      alt="young man in black suit"
+                    />
+                  </div>
+
+                  <h5 class="card-custom__title">Aliya Mir</h5>
+                  <p class="card-custom__subtitle">Iconik lifestyle manager</p>
+                </div>
+                <div class="card-custom">
+                  <div class="card-custom__picture">
+                    <img
+                      class="card-custom__img"
+                      src="./images/manager-3.jpg"
+                      alt="young man in black suit"
+                    />
+                  </div>
+
+                  <h5 class="card-custom__title">Unais el-Baccus</h5>
+                  <p class="card-custom__subtitle">Iconik lifestyle manager</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev btn-prev"
+            type="button"
+            data-bs-target="#carouselManagers"
+            data-bs-slide="prev"
+          >
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next btn-next"
+            type="button"
+            data-bs-target="#carouselManagers"
+            data-bs-slide="next"
+          >
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section class="contact-form" id="contact-form">
+        <div class="container container-custom">
+          <div class="wrapper">
+            <h3>Get a free consultation</h3>
+            <div class="box">
+              <div class="input-box">
+                <input
+                  class="input-box__input"
+                  type="text"
+                  id="fname"
+                  name="fname"
+                  placeholder="First name"
+                  required
+                />
+                <img
+                  class="input-box__icon"
+                  src="./images/user.svg"
+                  alt="person icon"
+                />
+              </div>
+              <div class="input-box">
+                <input
+                  class="input-box__input"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+971 123 4567"
+                  required
+                />
+                <img
+                  class="input-box__icon"
+                  src="./images/phone.svg"
+                  alt="phone icon"
+                />
+              </div>
+              <div class="input-box">
+                <input
+                  class="input-box__input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email address"
+                />
+                <img
+                  class="input-box__icon"
+                  src="./images/mail.svg"
+                  alt="list icon"
+                />
+              </div>
+            </div>
+            <button type="submit" class="btn-consult">
+              Get a consultation
+            </button>
+            <p class="caption d-none d-lg-inline-block">
+              By clicking the button you are accepting to receive an email about
+              club membership and a phone call to arrange a show-around.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="socials">
+        <div class="container container-custom">
+          <div class="wrapper">
+            <div class="box col-md-6 p-0">
+              <h2 class="section-title text-start">
+                We are on <br />
+                social media
+              </h2>
+              <p class="socials__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut.
+              </p>
+              <div class="socials__links">
+                <a href="#" class="socials__link">instagram</a>
+                <a href="#" class="socials__link">facebook</a>
+                <a href="#" class="socials__link">linkedin</a>
+              </div>
+            </div>
+
+            <div class="socials__gallery gallery col-md-6">
+              <div class="gallery__header">
+                <img
+                  src="./images/socials-avatar.svg"
+                  alt=""
+                  class="gallery__avatar"
+                />
+                <div class="gallery__heading">
+                  <p class="gallery__title">@iconik_event_atelier</p>
+                  <span class="gallery__desc">Description here</span>
+                </div>
+                <button type="button" class="gallery__btn-follow"></button>
+              </div>
+              <div class="gallery__pics">
+                <img
+                  src="./images/socials-gallery1.jpg"
+                  alt="girls at the pary"
+                  class="gallery__img"
+                />
+                <img
+                  src="./images/socials-gallery2.jpg"
+                  alt="pool and palms"
+                  class="gallery__img"
+                />
+                <img
+                  src="./images/gallery-5.jpg"
+                  alt="girls at the pary"
+                  class="gallery__img"
+                />
+                <img
+                  src="./images/socials-gallery4.jpg"
+                  alt="big palace and palms"
+                  class="gallery__img"
+                />
+                <img
+                  src="./images/gallery-4.jpg"
+                  alt="many people and confetti"
+                  class="gallery__img"
+                />
+                <img
+                  src="./images/gallery-8.jpg"
+                  alt="girls in swimsuits"
+                  class="gallery__img"
+                />
+              </div>
+              <button type="button" class="btn-more d-flex align-items-center">
+                <img
+                  src="./images/loader.svg"
+                  alt="two rounded arrows"
+                  class="btn-more__img"
+                />
+                Load more
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="footer" id="footer">
+      <div class="container container-custom">
+        <div class="box">
+          <img
+            src="./images/logo.svg"
+            alt="iconik logotype"
+            class="footer__logo"
+          />
+          <div class="row justify-content-center justify-content-lg-start">
+            <div class="col-5 col-md-3 footer__links">
+              <nav class="footer__nav">
+                <a href="#info" class="footer__link">About</a>
+                <a href="#services" class="footer__link">Services</a>
+                <a href="#lifestyle" class="footer__link">Gallery</a>
+                <a href="#contact-form" class="footer__link">Contacts</a>
+                <a href="#" class="footer__link">Privacy policy</a>
+              </nav>
+            </div>
+            <div class="col-7 col-md-3 footer__contacts">
+              <p class="footer__contact-title">phone</p>
+              <a href="tel:+971 55 230 8085 " class="footer__phone"
+                >+971 55 230 8085</a
+              >
+              <p class="footer__contact-title">email</p>
+              <a href="mailto: mailexample@gmail.com" class="footer__email"
+                >mailexample@gmail.com</a
+              >
+              <button type="button" class="btn-consult">Contact us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-box d-block d-lg-none m-auto">
+        <img src="./images/map.jpg" alt="points on the map of Dubai" />
+        <a
+          href="https://goo.gl/maps/Nfv1BF8wDcXcVtGS6"
+          target="_blank"
+          class="map-link d-lg-none"
+          >open in google maps</a
+        >
+      </div>
+      <div class="map-lg d-none d-lg-block">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12153.156776943528!2d55.144046169033274!3d25.096609640798633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b43c675c243%3A0x7dfdb7a273cf2c58!2zQWwgU3Vmb3VoIC0gRHViYWkgTWVkaWEgQ2l0eSAtINCU0YPQsdCw0LkgLSDQntCx0YrQtdC00LjQvdC10L3QvdGL0LUg0JDRgNCw0LHRgdC60LjQtSDQrdC80LjRgNCw0YLRiw!5e0!3m2!1sru!2sro!4v1686083454456!5m2!1sru!2sro"
+          width="945"
+          height="540"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map-lg__frame"
+        ></iframe>
+      </div>
+      <div class="footer-bottom">
+        <div class="container container-custom wrap">
+          <p class="footer-bottom__copyright">
+            &#169; 2023 All rights reserved.
+          </p>
+          <div class="footer-bottom__links d-none d-lg-block">
+            <a href="#" class="footer-bottom__link">Privacy policy</a>
+            <span class="ms-3 me-3">/</span>
+            <a href="#" class="footer-bottom__link">Club rules</a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
@@ -822,5 +1395,6 @@
     ></script>
     <script src="./js/playVideo.js"></script>
     <script src="./js/toggleCardHeight.js"></script>
+    <script src="./js/selectCustom.js"></script>
   </body>
 </html>

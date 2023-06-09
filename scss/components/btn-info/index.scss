@@ -1,0 +1,17 @@
+.btn-info {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  position: absolute;
+  bottom: 16px;
+  right: 21px;
+  border: 0;
+  border-radius: 50%;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:focus {
+    box-shadow: 0 0 2px 2px $white;
+  }
+}

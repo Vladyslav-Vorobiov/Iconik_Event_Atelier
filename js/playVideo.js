@@ -1,8 +1,12 @@
-const btnPlayEl = document.querySelector("#btn-play");
-const videoEl = document.querySelector(".hero__video");
+const heroSectionEl = document.querySelector(".hero");
+const eventsSectionEl = document.querySelector(".events");
 
-btnPlayEl.addEventListener("click", play);
+heroSectionEl.addEventListener("click", play);
+eventsSectionEl.addEventListener("click", play);
 
-function play() {
-  videoEl.play();
+function play(e) {
+  if (e.target.matches(".btn-play")) {
+    e.target.previousElementSibling.play();
+  }
+  return;
 }

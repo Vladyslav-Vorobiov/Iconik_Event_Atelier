@@ -1,14 +1,15 @@
 .hero {
-  position: relative;
-  min-height: 100vh;
+  height: 100vh;
 
   &__title {
+    padding-top: 101px;
+    margin-bottom: 30px;
     position: relative;
     z-index: 2;
-    margin: 50px 0 30px;
   }
 
   &__video {
+    -o-object-fit: cover;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -17,49 +18,20 @@
     width: 100%;
   }
 
-  &__btn-play {
-    transition: all 0.7s;
-    position: relative;
-    z-index: 2;
-    height: 52px;
-    width: 52px;
-    border-radius: 54%;
-    border: none;
-    background-image: url("../images/play-button.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    &:hover {
-      transform: rotate(360deg) scale(1.1);
-    }
-    &:active {
-      transition: all 0.1s;
-      box-shadow: inset 0 0 6px 4px $purple;
-    }
-  }
-
   &__subtitle {
     position: relative;
+    display: inline-block;
     z-index: 2;
   }
 
-  .hr-divider {
+  .btn-play {
+    display: inline-block;
     position: relative;
     z-index: 2;
-    opacity: 0.1;
-    &-static {
-      position: absolute;
-      z-index: 2;
-      opacity: 0.1;
-      top: 52px;
-      left: 0;
-      right: 0;
-    }
   }
 }
 
 .services {
-  @import "../../components/dropdown";
   .btn-group {
     &__btn {
       @include main-text2;
@@ -125,19 +97,6 @@
       width: 24px;
       border-radius: 0;
     }
-
-    &__btn-prev,
-    &__btn-next {
-      position: static;
-      @include arrow-btn-prop(50px, 50px, 18px 18px);
-    }
-
-    &__btn-prev {
-      @include arrow-btn-bg(0);
-    }
-    &__btn-next {
-      @include arrow-btn-bg(180deg);
-    }
   }
 }
 
@@ -149,12 +108,14 @@
     background-color: $main-bg;
     &:last-of-type {
       background-color: $white;
-      & p:nth-child(-n + 3) {
+      color: $main-bg;
+      .note-card__title {
         color: $main-bg;
       }
-      & p:nth-child(n + 4) {
+      & > [data-btn-all] {
         color: $light-grey;
         opacity: 0.5;
+        border-color: rgba(97, 93, 109, 0.5);
       }
     }
     &__img {
@@ -170,11 +131,9 @@
       text-align: center;
       font-family: "Al Veshion", sans-serif;
       font-weight: 400;
-      &:last-of-type {
-        color: $main-bg;
-      }
+      color: $white;
     }
-    &__caption {
+    &__feature {
       padding: 0 20px 0 40px;
       position: relative;
       @include main-text;
@@ -219,5 +178,320 @@
 
   .toggle-card-height {
     height: 360px;
+  }
+}
+
+.lifestyle {
+  .gallery {
+    display: grid;
+    margin: 0 auto;
+    font-size: 0;
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+    grid-template-rows: auto;
+    grid-auto-flow: row dense;
+    grid-gap: 10px;
+    grid-template-areas:
+      "parachute car"
+      "parachute skyscrapers"
+      "girls skyscrapers"
+      "girls flyboard"
+      "girls pool"
+      "yacht pool"
+      "yacht pool"
+      "yacht palace"
+      "party palace";
+
+    &__item1 {
+      grid-area: parachute;
+    }
+    &__item2 {
+      grid-area: car;
+    }
+    &__item3 {
+      grid-area: girls;
+    }
+    &__item4 {
+      grid-area: skyscrapers;
+    }
+    &__item5 {
+      grid-area: yacht;
+    }
+    &__item6 {
+      grid-area: flyboard;
+    }
+    &__item7 {
+      grid-area: party;
+    }
+    &__item8 {
+      grid-area: pool;
+    }
+    &__item9 {
+      grid-area: palace;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+}
+
+.events {
+  .videos {
+    padding: 0 15px;
+    margin-bottom: 30px;
+    gap: 10px;
+    overflow-x: scroll;
+    font-size: 0;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+    &__item {
+      width: 265px;
+      height: 216px;
+      position: relative;
+      flex-shrink: 0;
+    }
+    &__video {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+
+    &__subtitle {
+      max-width: 230px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      position: absolute;
+      bottom: 8px;
+      left: 20px;
+    }
+
+    @import "../../components/btn-play/";
+    .btn-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+    }
+  }
+  .btn-consult {
+    display: block;
+    width: 161px;
+    margin: 0 auto;
+  }
+}
+
+.managers {
+  margin-bottom: 44px;
+  .card-custom {
+    &__title {
+      margin: 16px 0 4px;
+      font-size: 16px;
+      text-transform: capitalize;
+    }
+    &__subtitle {
+      @include main-text2;
+    }
+  }
+}
+
+.contact-form {
+  .wrapper {
+    padding: 40px 30px;
+    background-color: $purple;
+  }
+  .box {
+    margin: 15px 0 30px;
+  }
+  .input-box {
+    position: relative;
+    border-bottom: 1px solid $white;
+    margin-bottom: 15px;
+    &__input {
+      width: 100%;
+      padding: 15px 40px 15px 10px;
+      background-color: transparent;
+      border: none;
+      border-radius: 8px 8px 0 0;
+      font-size: 14px;
+      color: $white;
+      transition: all 0.3s;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 4px 2px $white;
+      }
+      &::-webkit-input-placeholder {
+        color: $white;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+      }
+      &::-moz-placeholder {
+        color: $white;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+      }
+      &:-ms-input-placeholder {
+        color: $white;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+      }
+      &::-ms-input-placeholder {
+        color: $white;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+      }
+      &::placeholder {
+        color: $white;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+      }
+    }
+    &__icon {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translate(0, -50%);
+    }
+  }
+  .btn-consult {
+    background-color: $main-bg;
+    width: 100%;
+  }
+
+  .form-select {
+    background-color: transparent;
+    padding: 3px;
+  }
+}
+
+.socials {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px 0 50px;
+  }
+  .section-title {
+    margin-top: 0;
+  }
+  &__text {
+    @include main-text;
+    margin-bottom: 30px;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  &__link {
+    width: 90px;
+    height: 44px;
+    padding: 14px 13px;
+    border: 1px solid $white;
+    border-radius: 2px;
+    outline: 0;
+    @include text;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    &:after {
+      content: "";
+      background-image: url(../images/arrow-angle.svg);
+      background-size: 8px 8px;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      right: 4px;
+      top: 4px;
+    }
+  }
+  .gallery {
+    background-color: $footer-bg;
+    padding: 18px;
+    &__header {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+    }
+    &__heading {
+      margin-left: 10px;
+      flex-grow: 1;
+      @include text;
+      font-weight: 600;
+    }
+    &__desc {
+      @include text;
+      color: $white;
+      opacity: 0.25;
+      font-weight: 400;
+    }
+    &__btn-follow {
+      width: 30px;
+      height: 30px;
+      background-color: $main-bg;
+      color: $white;
+      font-size: 12px;
+      font-weight: 700;
+      border: none;
+      border-radius: 2px;
+      outline: 0;
+      position: relative;
+      transition: all 0.3s;
+      &:after {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &:hover {
+        background-color: $purple;
+      }
+      &:focus {
+        box-shadow: inset 0 0 2px 2px $white;
+      }
+    }
+    &__pics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 18px;
+    }
+    &__img {
+      width: 82px;
+      height: 82px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: 50% 20%;
+      object-position: 50% 20%;
+    }
+  }
+  .btn-more {
+    transition: all 0.3s;
+    width: 80px;
+    margin: 0 auto;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include text;
+    font-weight: 700;
+    color: $white;
+    background-color: transparent;
+    border: none;
+    border-radius: 2px;
+    &:focus {
+      box-shadow: 0 0 2px 2px $white;
+    }
   }
 }

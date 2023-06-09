@@ -1,0 +1,5 @@
+.btn-prev {
+  position: static;
+  @include arrow-btn-prop(50px, 50px, 18px 18px);
+  @include arrow-btn-bg(0);
+}
