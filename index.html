@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- sass --watch scss/index.scss:styles/style.css -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,12 +11,12 @@
     />
     <title>IconiK</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/index.min.css" />
   </head>
   <body>
     <header class="header">
@@ -70,10 +69,10 @@
                   <button
                     type="button"
                     class="itc-select__toggle select-lang__toggle"
-                    name="service"
-                    value=""
+                    name="language"
+                    value="english"
                     data-select="toggle"
-                    data-index="-1"
+                    data-index="2"
                   >
                     Eng
                   </button>
@@ -96,20 +95,20 @@
                         FR
                       </li>
                       <li
-                        class="itc-select__option select-lang__option"
+                        class="itc-select__option itc-select__option_selected select-lang__option"
                         data-select="option"
-                        data-value="ukrainian"
+                        data-value="english"
                         data-index="2"
                       >
-                        UA
+                        ENG
                       </li>
                       <li
                         class="itc-select__option select-lang__option"
                         data-select="option"
-                        data-value="english"
+                        data-value="ukrainian"
                         data-index="3"
                       >
-                        ENG
+                        UA
                       </li>
                     </ul>
                   </div>
@@ -133,7 +132,7 @@
             class="hero__video"
             poster="./images/hero-video-poster.jpg"
           >
-            <source src="./video/sample-5s.mp4" type="video/mp4" />
+            <source src="#" type="video/mp4" />
             <source src="#" type="video/mp4" />
           </video>
           <button
@@ -155,20 +154,28 @@
           <button
             type="button"
             class="itc-select__toggle"
-            name="service"
-            value=""
+            name=""
+            value="all"
             data-select="toggle"
-            data-index="-1"
+            data-index="0"
           >
             All services
           </button>
           <div class="itc-select__dropdown">
             <ul class="itc-select__options">
               <li
+                class="itc-select__option itc-select__option_selected"
+                data-select="option"
+                data-value="all"
+                data-index="0"
+              >
+                All services
+              </li>
+              <li
                 class="itc-select__option"
                 data-select="option"
                 data-value="dine"
-                data-index="0"
+                data-index="1"
               >
                 Dine
               </li>
@@ -176,7 +183,7 @@
                 class="itc-select__option"
                 data-select="option"
                 data-value="ride"
-                data-index="1"
+                data-index="2"
               >
                 Ride
               </li>
@@ -184,7 +191,7 @@
                 class="itc-select__option"
                 data-select="option"
                 data-value="discover"
-                data-index="2"
+                data-index="3"
               >
                 Discover
               </li>
@@ -192,7 +199,7 @@
                 class="itc-select__option"
                 data-select="option"
                 data-value="relax"
-                data-index="3"
+                data-index="4"
               >
                 Relax
               </li>
@@ -200,7 +207,7 @@
                 class="itc-select__option"
                 data-select="option"
                 data-value="experience"
-                data-index="3"
+                data-index="5"
               >
                 Experience
               </li>
@@ -218,7 +225,6 @@
           <button type="button" class="btn btn-group__btn">Relax</button>
           <button type="button" class="btn btn-group__btn">Experience</button>
         </div>
-
         <div class="carousel-custom d-lg-none">
           <div class="carousel-custom__box">
             <article class="carousel-custom__card card-custom">
@@ -327,7 +333,7 @@
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="d-flex gap-3 justify-content-lg-center">
+              <div class="d-flex justify-content-lg-center box">
                 <article class="card-custom">
                   <a href="#" class="card-custom__picture">
                     <img
@@ -423,7 +429,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <div class="d-flex gap-3 justify-content-lg-center">
+              <div class="d-flex justify-content-lg-center box">
                 <article class="card-custom">
                   <a href="#" class="card-custom__picture">
                     <img
@@ -1381,16 +1387,16 @@
             &#169; 2023 All rights reserved.
           </p>
           <div class="footer-bottom__links d-none d-lg-block">
-            <a href="#" class="footer-bottom__link">Privacy policy</a>
-            <span class="ms-3 me-3">/</span>
-            <a href="#" class="footer-bottom__link">Club rules</a>
+            <a href="#" class="footer-bottom__link">Privacy policy</a
+            ><span class="ms-3 me-3">/</span
+            ><a href="#" class="footer-bottom__link">Club rules</a>
           </div>
         </div>
       </div>
     </footer>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
     <script src="./js/playVideo.js"></script>

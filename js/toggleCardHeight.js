@@ -1,3 +1,5 @@
+"use strict";
+
 const sectionMembershipEl = document.querySelector(".membership");
 
 sectionMembershipEl.addEventListener("click", grow);

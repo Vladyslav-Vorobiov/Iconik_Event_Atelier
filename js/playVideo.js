@@ -1,3 +1,5 @@
+"use strict";
+
 const heroSectionEl = document.querySelector(".hero");
 const eventsSectionEl = document.querySelector(".events");
 

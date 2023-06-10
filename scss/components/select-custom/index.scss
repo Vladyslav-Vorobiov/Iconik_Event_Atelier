@@ -19,6 +19,9 @@
   border: 1px solid $light-grey;
   border-radius: 0;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 

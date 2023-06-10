@@ -4,6 +4,10 @@
 @import "./extends.scss";
 @import "./mixins.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Manrope", sans-serif;
   font-weight: 400;

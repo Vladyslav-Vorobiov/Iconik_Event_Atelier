@@ -69,7 +69,11 @@
         padding: 0;
       }
       &__link {
+        transition: all 0.3s;
         color: $light-grey;
+        &:hover {
+          color: $white;
+        }
       }
     }
   }

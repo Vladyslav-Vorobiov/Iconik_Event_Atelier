@@ -21,6 +21,17 @@
         }
       }
     }
+    .carousel {
+      max-width: 1920px;
+      margin: 0 auto;
+      &-inner {
+        max-width: 1880px;
+        margin: 0 auto;
+      }
+      .box {
+        gap: 20px;
+      }
+    }
   }
 
   .info {
@@ -208,8 +219,11 @@
         line-height: 30px;
       }
       &__picture {
-        width: 370px;
+        max-width: 100%;
         pointer-events: none;
+        &:after {
+          display: none;
+        }
       }
     }
   }

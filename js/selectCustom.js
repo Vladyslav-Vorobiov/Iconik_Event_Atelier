@@ -1,3 +1,5 @@
+"use strict";
+
 class ItcCustomSelect {
   static EL = "itc-select";
   static EL_SHOW = "itc-select_show";
