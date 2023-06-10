@@ -1,12 +1,20 @@
 {
-  "name": "deviteam_layout",
+  "name": "iconik",
   "version": "1.0.0",
-  "description": "",
+  "description": "Iconik website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "VladV",
+  "keywords": [
+    "js",
+    "javascript",
+    "HTML",
+    "CSS",
+    "adaptive",
+    "responsive"
+  ],
+  "author": "VladV <vorobiov.v90@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
