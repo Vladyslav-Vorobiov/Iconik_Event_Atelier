@@ -8,7 +8,7 @@ let sourcemaps = require("gulp-sourcemaps");
 
 function buildStyles() {
   return gulp
-    .src(`./scss/index.scss`)
+    .src(`./src/scss/index.scss`)
     .pipe(sourcemaps.init())
     .pipe(
       sass({
@@ -16,14 +16,14 @@ function buildStyles() {
       }).on("error", sass.logError)
     )
     .pipe(autoprefixer("last 2 versions"))
-    .pipe(gulp.dest(`./styles`))
+    .pipe(gulp.dest(`./src/styles`))
     .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write(`./`))
-    .pipe(gulp.dest(`./styles`));
+    .pipe(gulp.dest(`./src/styles`));
 }
 
 exports.buildStyles = buildStyles;
 exports.default = async function () {
-  gulp.watch(`./scss/**/*.scss`, gulp.series(buildStyles));
+  gulp.watch(`./src/scss/**/*.scss`, gulp.series(buildStyles));
 };
